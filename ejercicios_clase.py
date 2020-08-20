@@ -26,6 +26,35 @@ def ej1():
 
     numero_2 = int(input('Ingrese el segundo número:\n'))
 
+    numero_1 = 22
+    numero_2 = 24
+
+    if numero_1 > numero_2:
+        print("numero_1 es mayor a numero_2")
+
+    else:
+        print("numero_2 es mayor a numero_1") 
+
+
+    if numero_1 > 0:
+        print("numero_1 es positivo")
+
+    elif numero_1 < 0:
+        print("numero_1 es negativo")
+
+    if numero_1 > 0 and numero_1 < 100:
+        print("numero_1 esta entre 0 y 100") 
+
+    else:
+        print("numero_1 sale del rango de 0 y 100")    
+
+    if numero_1 < 10 and numero_2 > -2:
+        print("incorrecto para 1")
+
+    else:
+        print("correcto para el 2")    
+
+
     # Compare cual de los dos números es mayor
     # Imprima en pantalla según corresponda
 
@@ -50,24 +79,65 @@ def ej2():
 
     texto_2 = str(input('Ingrese la segunda palabra:\n'))
 
+    primera = "rodrigo"
+    segunda = "andres"
+
+    
+
     # Compare cual de las dos palabras es mayor (alfabéticamente)
     # Imprima en pantalla según corresponda
+    if primera > segunda:
+        print("{} es mayor que {}".format(primera, segunda))
+
+    else:
+        print("{} es mayor que {}".format(segunda, primera))
 
     # Compare cual de las dos palabras tiene mayor
     # cantidad de letras
     # Imprima en pantalla según corresponda
+    if len(primera) > len(segunda):
+        print("rodrigo tiene mas letras")
+
+    else:
+        print("andres tiene mas letras")   
+
 
     # Verifique si la primera letra de la primera palabra
     # es mayor a la primera letra de la segunda palabra
     # Imprima en pantalla según corresponda
+
+    
+    if primera > segunda:
+        print("{} es mayor que {}".format(primera[0], segunda[0]))
+
+    else:
+        print("{} no es mayor {}".format(segunda[0], primera[0]))
+
 
     copia_texto_1 = texto_1  # Copia de la variable texto_1
 
     # Verifique que copia_texto_1 es igual a texto_1
     # Imprima en pantalla según corresponda
 
+    copia_texto_1 = texto_1
+
+    if copia_texto_1 == texto_1:
+        print("son iguales")
+
+    else:
+        print("son distintos")    
+
     # Verifique que copia_texto_1 es distinta a texto_2
     # Imprima en pantalla según corresponda
+
+    copia_texto_1 = texto_1
+    copia_texto_2 = texto_2
+
+    if copia_texto_1 == texto_2:
+        print("son iguales")
+
+    else:
+        print("son distintos")    
 
 
 def ej3():
@@ -87,6 +157,20 @@ def ej3():
     #       --> En caso afirmativo imprima en pantalla "Resp=3"
     #       --> En caso negativo imprima en pantalla "Resp=4"
 
+    if numero_1 > 5: 
+        print("afirmativo")
+
+    numero_1 = "afirmativo"    
+
+    if numero_1 == "afirmativo" and numero_2 >0:
+        print("Resp=1")    
+
+    else:
+        print("Resp=2")    
+
+
+          
+
     # Verifique la calificación de un estudiante según su
     # puntaje en un examen
     puntaje = 70
@@ -99,6 +183,18 @@ def ej3():
 
     # Debe imprimir en pantalla la calificacion
     # Utilizar "if" anidados
+    if puntaje >= 90:
+        print("A")
+    elif puntaje >= 80:
+        print("B")
+    elif puntaje >= 70:
+        print("C")
+    elif puntaje >= 60:
+        print("D")
+    elif puntaje < 60:
+        print("F")
+
+            
 
 
 def ej4():
@@ -110,10 +206,26 @@ def ej4():
     # Verifique cual cual de los dos textos es mayor alfabéticamente
     # Imprima en pantalla según corresponda
 
+    if texto_1 > texto_2:
+        print("texto 1 es mayor")
+
+    else:
+        print("texto 2 es mayor")  
+
+
     # Transforma esas variables tipo texto y almacénalas
     # en nuevas variables númericas (int)
     # Repita el proceso, ¿Cuál de las nuevas variables es mayor?
     # Imprima en pantalla según corresponda
+    texto_1 = 5
+    texto_2 = 7
+
+    if texto_1 > texto_2:
+        print("texto 1 es mayor")
+
+    else:
+        print("texto 2 es mayor")  
+
 
     # Para pensar!
     # ¿Por qué cree que texto_2 es mayor a texto_1?
@@ -126,7 +238,7 @@ def ej4():
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    #ej1()
-    #ej2()
-    #ej3()
-    #ej4()
+    ej1()
+    ej2()
+    ej3()
+    ej4()
