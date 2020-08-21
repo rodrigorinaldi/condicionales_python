@@ -111,11 +111,52 @@ def ej3():
     numero_2 = int(input())
     print("numero ingresado", numero_2)
 
-    print("sumar ambos numeros")
-    suma = numero_1 + numero_2
-    print("el resultado de la suma es", suma) 
+    print("ingrese la operacion a realizar: +, -, *, /, **")
+    operador = str(input())
+    print("operador ingresado", operador)
 
+    suma = (numero_1 + numero_2)
+    resta = (numero_1 - numero_2)
+    multiplicacion = (numero_1 * numero_2)
+    division = (numero_1 / numero_2)
+    potencia = (numero_1 ** numero_2)
 
+    if operador == (suma):
+        print("realizar operacion")
+        suma = str(input())
+        print("el resultado es", suma)
+    
+    elif operador == (resta):
+         print("realizar operacion")
+         resta = str(input())
+         print("el resultado es", resta)
+
+    elif operador == (multiplicacion):
+         print("realizar operacion")
+         resta = str(input())
+         print("el resultado es", multiplicacion)
+
+    elif operador == (division):
+         print("realizar operacion")
+         resta = str(input())
+         print("el resultado es", division)
+
+    elif operador == (potencia):
+         print("realizar operacion")
+         resta = str(input())
+         print("el resultado es", potencia)        
+
+    else:
+        print("es incorrecto")
+    
+    
+
+    
+    
+    
+    
+
+    
 
 
 def ej4():
@@ -146,31 +187,19 @@ def ej4():
     print("ingresar tercer palabra")
     palabra_3 = str(input())
     print("palabra ingresada", palabra_3)
-    
-    ordenar_1 =  "ordenar_por_alfabeto"
-    ordenar_2 =  "ordenar_por_tamaño"
-
-        
-
-
-
-
-   
-   
-        
 
     
+    print("elegir operacion a realizar tipeando 1 o 2" )
+    operacion = str(input())
+    print("operacion elegida", operacion)
 
+    if operacion == "1":
+        print("{} es mayor que {} y mayor que {}".format(palabra_1, palabra_2, palabra_3))
 
+    elif operacion == "2":
+        
 
-
-
-
-
-
-
-
-
+    
 def ej5():
     print('Ejercicios de práctica con números')
 
@@ -183,11 +212,11 @@ def ej5():
 
     En cada caso imprimir en pantalla el resultado
     '''
-
+    
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     #ej1()
     #ej2()
-    #ej3()
-    ej4()
+    ej3()
+    #ej4()
     #ej5()
