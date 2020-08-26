@@ -115,39 +115,61 @@ def ej3():
     operador = str(input())
     print("operador ingresado", operador)
 
-    suma = (numero_1 + numero_2)
-    resta = (numero_1 - numero_2)
-    multiplicacion = (numero_1 * numero_2)
-    division = (numero_1 / numero_2)
-    potencia = (numero_1 ** numero_2)
-
-    if operador == (suma):
-        print("realizar operacion")
-        suma = str(input())
-        print("el resultado es", suma)
+    if operador == "+":
     
-    elif operador == (resta):
-         print("realizar operacion")
-         resta = str(input())
-         print("el resultado es", resta)
+        suma = numero_1 + numero_2
+        print('La suma entre {} y {} es {}'.format(numero_1, numero_2, suma))
+    if operador == "-":
 
-    elif operador == (multiplicacion):
-         print("realizar operacion")
-         resta = str(input())
-         print("el resultado es", multiplicacion)
+        resta = numero_1 - numero_2
+        print('La resta entre {} y {} es {}'.format(numero_1, numero_2, resta))
+    if operador == "*":
 
-    elif operador == (division):
-         print("realizar operacion")
-         resta = str(input())
-         print("el resultado es", division)
+        multiplicacion = numero_1 * numero_2
+        print('La multiplicacion entre {} y {} es {}'.format(numero_1, numero_2, multiplicacion))
+    if operador == "/":
 
-    elif operador == (potencia):
-         print("realizar operacion")
-         resta = str(input())
-         print("el resultado es", potencia)        
+        division = numero_1 / numero_2
+        print('La division entre {} y {} es {}'.format(numero_1, numero_2, division))
+    if operador == "**":
 
-    else:
-        print("es incorrecto")
+        exponente = numero_1 ** numero_2
+        print('El exponente entre {} y {} es {}'.format(numero_1, numero_2, exponente))
+
+
+    #suma = (numero_1 + numero_2)
+    #resta = (numero_1 - numero_2)
+    #multiplicacion = (numero_1 * numero_2)
+    #division = (numero_1 / numero_2)
+    #potencia = (numero_1 ** numero_2)
+
+    #if operador == (suma):
+        #print("realizar operacion")
+        #suma = str(input())
+        #print("el resultado es", suma)
+    
+    #elif operador == (resta):
+         #print("realizar operacion")
+         #resta = str(input())
+         #print("el resultado es", resta)
+
+    #elif operador == (multiplicacion):
+         #print("realizar operacion")
+         #resta = str(input())
+         #print("el resultado es", multiplicacion)
+
+    #elif operador == (division):
+         #print("realizar operacion")
+         #resta = str(input())
+         #print("el resultado es", division)
+
+    #elif operador == (potencia):
+         #print("realizar operacion")
+         #resta = str(input())
+         #print("el resultado es", potencia)        
+
+    #else:
+        #print("es incorrecto")
     
     
 
@@ -174,6 +196,11 @@ def ej4():
     Si se ingresa "2" por consola se deben ordenar las 3 palabras por cantidad de letras
     e imprimir en pantalla de la mayor a la menor
     '''
+    #myStr = " Hello "
+    #print(dir(myStr))
+
+    
+
     print("ingresar 3 palabras a elección")
 
     print("igresar primer palabra")
@@ -193,13 +220,31 @@ def ej4():
     operacion = str(input())
     print("operacion elegida", operacion)
 
-    if operacion == "1":
-        print("{} es mayor que {} y mayor que {}".format(palabra_1, palabra_2, palabra_3))
+    texto = [palabra_1, palabra_2, palabra_3]
 
-    elif operacion == "2":
+    # texto.sort()
+    #     print(texto)
+
+    if operacion == "1":
+        if palabra_1 > palabra_2 and palabra_3:
+            print("{} es mayor que {} y que {}".format(palabra_1, palabra_2, palabra_3))
+        if palabra_1 > palabra_2 < palabra_3:
+            print("{} es mayor que {} y menor que {}".format(palabra_1, palabra_2, palabra_3))
+        if palabra_1 < palabra_2 > palabra_3:
+            print("{} es menor que {} y mayor que {}".format(palabra_1, palabra_2, palabra_3))
+
+    if operacion == "2":
+        if len(palabra_1) > len(palabra_2) > len(palabra_3):
+            print("palabra_1 es mayor que palabra_2 y que palabra_3")
+        if len(palabra_2) > len(palabra_3) > len(palabra_1):
+            print("palabra_2 es mayor que palabra_1 y palabra_3")
+
+        else:
+            print("palabra_3 es mayor que 1 y 2")
+        
+        
         
 
-    
 def ej5():
     print('Ejercicios de práctica con números')
 
@@ -212,11 +257,57 @@ def ej5():
 
     En cada caso imprimir en pantalla el resultado
     '''
+    print("ingresar 3 valores diferentes")
+
+    print("ingresar primer valor")
+    valor_1 = str(input())
+    print("valor ingresado", valor_1)
+
+    print("ingresar segundo valor")
+    valor_2 = str(input())
+    print("valor ingresado", valor_2)
+
+    print("ingresar tercer valor")
+    valor_3 = str(input())
+    print("valor ingresado", valor_3)
+
+    valor_1 = 37
+    valor_2 = 39
+    valor_3 = 35
+
+    if valor_1 > valor_2 and valor_3:
+        print("el mayor es valor_1", valor_1)
+    elif valor_2 > valor_1 and valor_3:
+        print("el mayor es valor_2", valor_2)
+    else:
+        print("el 3 es el mayor", valor_3)
+
+    
+    
+    if valor_1 < valor_2 < valor_3:
+        print("el menor es valor_1", valor_1)
+    elif valor_2 < valor_3 < valor_1:
+        print("el menor es valor_2", valor_2)   
+    else:
+        print("el tercer valor es el menor", valor_3)
+
+
+
+    promedio = (valor_1 + valor_2 + valor_3) / 3
+    print("promedio", promedio)
+
+
+
+             
+
+
+
+
     
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     #ej1()
     #ej2()
-    ej3()
+    #ej3()
     #ej4()
-    #ej5()
+    ej5()
