@@ -101,7 +101,7 @@ def ej3():
     Se debe efectuar el cálculo correcto según la operación ingresada por consola
     Imprimir en pantalla la operación realizada y el resultado
     '''
-    print(" ingresar dos numeros para luego sumarlos")
+    print(" ingresar dos numeros y realizar operacion deceada")
 
     print ("primer numero")
     numero_1 = int(input())
@@ -111,65 +111,67 @@ def ej3():
     numero_2 = int(input())
     print("numero ingresado", numero_2)
 
-    print("ingrese la operacion a realizar: +, -, *, /, **")
+    print("ingrese la operacion a realizar: + , - , * , / , **")
     operador = str(input())
     print("operador ingresado", operador)
 
-    if operador == "+":
+    suma = (numero_1 + numero_2)
+    resta = (numero_1 - numero_2)
+    multiplicacion = (numero_1 * numero_2)
+    division = (numero_1 / numero_2)
+    potencia = (numero_1 ** numero_2)
+
+    #if operador == "+":
     
-        suma = numero_1 + numero_2
-        print('La suma entre {} y {} es {}'.format(numero_1, numero_2, suma))
-    if operador == "-":
+        #suma = numero_1 + numero_2
+        #print('La suma entre {} y {} es {}'.format(numero_1, numero_2, suma))
+    #if operador == "-":
 
-        resta = numero_1 - numero_2
-        print('La resta entre {} y {} es {}'.format(numero_1, numero_2, resta))
-    if operador == "*":
+        #resta = numero_1 - numero_2
+        #print('La resta entre {} y {} es {}'.format(numero_1, numero_2, resta))
+    #if operador == "*":
 
-        multiplicacion = numero_1 * numero_2
-        print('La multiplicacion entre {} y {} es {}'.format(numero_1, numero_2, multiplicacion))
-    if operador == "/":
+        #multiplicacion = numero_1 * numero_2
+        #print('La multiplicacion entre {} y {} es {}'.format(numero_1, numero_2, multiplicacion))
+    #if operador == "/":
 
-        division = numero_1 / numero_2
-        print('La division entre {} y {} es {}'.format(numero_1, numero_2, division))
-    if operador == "**":
+        #division = numero_1 / numero_2
+        #print('La division entre {} y {} es {}'.format(numero_1, numero_2, division))
+    #if operador == "**":
 
-        exponente = numero_1 ** numero_2
-        print('El exponente entre {} y {} es {}'.format(numero_1, numero_2, exponente))
+        #exponente = numero_1 ** numero_2
+        #print('El exponente entre {} y {} es {}'.format(numero_1, numero_2, exponente))
 
 
-    #suma = (numero_1 + numero_2)
-    #resta = (numero_1 - numero_2)
-    #multiplicacion = (numero_1 * numero_2)
-    #division = (numero_1 / numero_2)
-    #potencia = (numero_1 ** numero_2)
-
-    #if operador == (suma):
-        #print("realizar operacion")
-        #suma = str(input())
-        #print("el resultado es", suma)
     
-    #elif operador == (resta):
-         #print("realizar operacion")
-         #resta = str(input())
-         #print("el resultado es", resta)
 
-    #elif operador == (multiplicacion):
-         #print("realizar operacion")
-         #resta = str(input())
-         #print("el resultado es", multiplicacion)
+    if operador == (suma):
+        print("realizar operacion")
+        suma = str(input())
+        print("el resultado es", suma)
+    
+    elif operador == (resta):
+         print("realizar operacion")
+         resta = str(input())
+         print("el resultado es", resta)
 
-    #elif operador == (division):
-         #print("realizar operacion")
-         #resta = str(input())
-         #print("el resultado es", division)
+    elif operador == (multiplicacion):
+         print("realizar operacion")
+         multiplicacion = str(input())
+         print("el resultado es", multiplicacion)
 
-    #elif operador == (potencia):
-         #print("realizar operacion")
-         #resta = str(input())
-         #print("el resultado es", potencia)        
+    elif operador == (division):
+         print("realizar operacion")
+         division = str(input())
+         print("el resultado es", division)
 
-    #else:
-        #print("es incorrecto")
+    elif operador == (potencia):
+         print("realizar operacion")
+         potencia = str(input())
+         print("el resultado es", potencia)        
+
+    else:
+        print("es incorrecto")
     
     
 
@@ -222,15 +224,15 @@ def ej4():
 
     texto = [palabra_1, palabra_2, palabra_3]
 
-    # texto.sort()
-    #     print(texto)
+    #texto.sort()
+     #print(texto)
 
     if operacion == "1":
-        if palabra_1 > palabra_2 and palabra_3:
+        if palabra_1 > palabra_2 and palabra_1 > palabra_3:
             print("{} es mayor que {} y que {}".format(palabra_1, palabra_2, palabra_3))
-        if palabra_1 > palabra_2 < palabra_3:
+        if palabra_1 > palabra_2 and palabra_1 < palabra_3:
             print("{} es mayor que {} y menor que {}".format(palabra_1, palabra_2, palabra_3))
-        if palabra_1 < palabra_2 > palabra_3:
+        if palabra_1 < palabra_2 and palabra_2 > palabra_3:
             print("{} es menor que {} y mayor que {}".format(palabra_1, palabra_2, palabra_3))
 
     if operacion == "2":
@@ -260,41 +262,37 @@ def ej5():
     print("ingresar 3 valores diferentes")
 
     print("ingresar primer valor")
-    valor_1 = str(input())
+    valor_1 = int(input())
     print("valor ingresado", valor_1)
 
     print("ingresar segundo valor")
-    valor_2 = str(input())
+    valor_2 = int(input())
     print("valor ingresado", valor_2)
 
     print("ingresar tercer valor")
-    valor_3 = str(input())
+    valor_3 = int(input())
     print("valor ingresado", valor_3)
 
-    valor_1 = 37
-    valor_2 = 39
-    valor_3 = 35
+    
 
-    if valor_1 > valor_2 and valor_3:
-        print("el mayor es valor_1", valor_1)
-    elif valor_2 > valor_1 and valor_3:
-        print("el mayor es valor_2", valor_2)
+    if valor_1 > valor_2 and valor_1 > valor_3:
+        print("el mayor es valor 1 =", valor_1)
+    elif valor_2 > valor_1 and valor_2 > valor_3:
+        print("el mayor es valor 2 =", valor_2)
     else:
-        print("el 3 es el mayor", valor_3)
+        print("el 3 es el mayor =", valor_3)
 
+    if valor_1 < valor_2 and valor_1 < valor_3:
+        print("el menor es valor 1 =", valor_1)
+    elif valor_2 < valor_3 and valor_2 < valor_1:
+        print("el menor es valor 2=", valor_2)   
+    else:
+        print("el tercer valor es el menor =", valor_3)
     
     
-    if valor_1 < valor_2 < valor_3:
-        print("el menor es valor_1", valor_1)
-    elif valor_2 < valor_3 < valor_1:
-        print("el menor es valor_2", valor_2)   
-    else:
-        print("el tercer valor es el menor", valor_3)
-
-
-
     promedio = (valor_1 + valor_2 + valor_3) / 3
     print("promedio", promedio)
+
 
 
 
